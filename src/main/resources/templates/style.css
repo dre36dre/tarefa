@@ -1,7 +1,11 @@
 table{
-    width: 100;
+    width: 1000;
 }
 
+.data-inicio{
+    min-height: 50%;
+    color: brown;
+}
 
 h1{
     color: green;
@@ -9,13 +13,14 @@ h1{
     text-decoration: underline;
 }
     
-    article.numeracao{
+    #article.numeracao{
         color:green;
         text-align: center;
     }
 
     .descricao{
         color: red;
+        width: 70%;
     }
 
     .comentario{
