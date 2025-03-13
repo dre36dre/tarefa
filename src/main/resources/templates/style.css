@@ -2,8 +2,18 @@ table{
     width: 1000;
 }
 
+.Solicitado{
+    width: 50%;
+    height: 100;
+}
+
+.Etapa-realizada{
+    width: 10%;
+}
+
+
 .data-inicio{
-    min-height: 50%;
+    min-height: 20%;
     color: brown;
 }
 
@@ -13,7 +23,7 @@ h1{
     text-decoration: underline;
 }
     
-    #article.numeracao{
+    #article .numeracao{
         color:green;
         text-align: center;
     }
