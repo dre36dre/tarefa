@@ -7,14 +7,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-
+import com.anderson.tarefas.TarefasApplication;
 import com.anderson.tarefas.model.Tarefa;
 import com.anderson.tarefa.service.TarefaService;
 
 @RestController
 public class TarefaController {
+
+    private final TarefasApplication tarefasApplication;
 	
-private TarefaService tarefaService;
+private tarefasApplicatione tarefaService;
+
+    TarefaController(TarefasApplication tarefasApplication) {
+        this.tarefasApplication = tarefasApplication;
+    }
 	
 	@Autowired
 	public void setTarefaService(TarefaService tarefaService)
