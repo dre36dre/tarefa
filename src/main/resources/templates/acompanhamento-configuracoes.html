@@ -20,19 +20,17 @@
     <!--Cabeçalho-->
     <table border="1" style="border-collapse: collapse;">
     <tr>
-      <td id="titulo">CheckList s</td>
+      <td id="titulo"  colspan="5">CheckList</td>
     </tr>
     <tr>
       <td>Área</td>
       <td>Código</td>
-      <td>Nome do procedimento</td>
+      <td>Nome do procedimento: Atividade de Suporte</td>
     </tr>
     <tr>
       <td>Versão atual</td>
       <td>Versão anterior</td>
-      <td>Vigência: 
-
-        01/11/2020 </td>
+      <td>Vigência:   01/11/2020 </td>
       <td>Responsável: 
 
         OPERAÇÃO PISO BRANCO </td>
@@ -48,15 +46,52 @@
             Área:    <input type="text" name="area" placeholder="area">     <br>         
             
             (  <input type="radio" name="X" value="X"> ) Inicial ( <input type="radio" name="X" value="X"> ) Continuação </td>
-        <td class="analista" id="analista">ANALISTA:  <input type="search" name="analista"> <br>
-
-          <br>  ID:  <input type="number">
+        <td class="analista" >
+          ANALISTA:  <input list="analista" name="analista"> <br>
+          ID: <input type="number" name="id"> 
+          
+          <datalist id="analista">
+                        <option value="Adriano">Adriano</option>
+                        <option value="Alexandre">Alexandre</option>
+                        <option value="Anderson">Anderson</option>
+                        <option value="Angela">Angela</option>
+                        <option value="Bianca">Bianca</option>
+                        <option value="Eudemir">Eudemir</option>
+                        <option value="Marcelo Barbosa">Marcelo Barbosa</option>
+                        <option value="Marcelo">Marcelo Santos</option>
+                        <option value="Jonathan">Jonathan</option>
+                        <option value="Rafael">Rafael</option>
+                        <option value="Wesley">Wesley</option>
+                    </select>
             </td>
       </tr>
 
       <tr>
-        <td>AMBIENTE: <input type="text" name="ambiente" placeholder="AMBIENTE">   </td>
-        <td>SITE: <input type="text" name="site" placeholder="site"></td>
+        <td>AMBIENTE:
+          <input list="ambiente" name="ambiente">
+          
+          <datalist id="ambiente">
+          <option value="DataCenter">Data Center</option>
+          <option value="CCC">CCC</option>
+          <option value="ECLUSA">ECLUSA</option>
+        </select>  
+      </td>
+      <td>SITE:
+        <input  list="site" name="site" >
+        <datalist id="site">
+             <option value="BERRINI">BERRINI</option>
+          <option value="Chucri Zaidan">Chucri Zaidan</option>
+          <option value="NDC">NDC</option>
+          <option value="Curitiba">Curitiba</option>
+          <option value="Campinas">Campinas</option>
+      
+        </td>
+        </td>
+        </td>
+        </td>
+      </tr>
+      </tr>
+      </tr>
       </tr>
       </table>
       
@@ -122,7 +157,7 @@
 
 		Serial:  
 
-		Localização:  Fila (       <input type="number" name="fila">    )  Rack ( <input type="number" name="rack">          ) 
+		Localização:  Fila (            )  Rack (           ) 
 
 		Tipo do equipamento: 
 
@@ -160,7 +195,7 @@
 
 		Empresa: <input type="search" name="empresa"><br>
 
-		Telefone: 	<input type="tel" placeholder="(xx) xxxx-xxxx"><br> 
+		Telefone: 	<input type="number" placeholder="(xx) xxxx-xxxx"><br> 
 
 		Em caso de mais técnicos, colocar os dados no verso da folha. </td>
       </tr>
@@ -245,7 +280,7 @@
 
 		Caso não, justificar, inserir comentário no Resumo do checklist, informar ponto focal e colocar a observação Vivo Now.  
 
-		-Todos os padrões encontram-se no documento Sharepoint > Padrão_Telefonica.doc. Em caso de NOK informar o ponto focal, colocar no detalhamento desse chamado Vivo Now e no final do checklist. </td>      
+		<br>-Todos os padrões encontram-se no documento Sharepoint > Padrão_Telefonica.doc. <br> Em caso de NOK informar o ponto focal, colocar no detalhamento desse chamado Vivo Now e no final do checklist. </td>      
       </tr>
       <tr>
         <td> <input type="radio" name="18"> </td><!--Sim-->
@@ -297,8 +332,96 @@
     </h2>
   </article>
 </table>
+
+<table border="1" style="border-collapse: collapse;">
+<!--ASSINATURA-->
+<tr>
+  <td>
+<h2>Assinatura Digital Analista</h2>
+    <div class="signature-container">
+        <canvas id="signaturePad" class="signature-pad"></canvas>
+        <div class="label">Analista</div>
+        <button onclick="clearSignature()">Limpar Assinatura</button>
+    </div>
+    <script>
+        const canvas = document.getElementById('signaturePad');
+        const ctx = canvas.getContext('2d');
+        let drawing = false;
+        
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDrawing);
+        canvas.addEventListener('mouseleave', stopDrawing);
+        
+        function startDrawing(event) {
+            drawing = true;
+            ctx.beginPath();
+            ctx.moveTo(event.offsetX, event.offsetY);
+        }
+        
+        function draw(event) {
+            if (!drawing) return;
+            ctx.lineTo(event.offsetX, event.offsetY);
+            ctx.stroke();
+        }
+        
+        function stopDrawing() {
+            drawing = false;
+        }
+        
+        function clearSignature() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    </script>
+</td>
+
+
+  
+<td>
+  <h2>Assinatura Digital Técnico</h2>
+      <div class="signature-container">
+          <canvas id="signaturePad" class="signature-pad"></canvas>
+          <div class="label">Analista</div>
+          <button onclick="clearSignature()">Limpar assinatura</button>
+      </div>
+      <script>
+          const canvas = document.getElementById('signaturePad');
+          const ct = canvas.getContext('2d');
+          let drawin = false;
+          
+          canvas.addEventListener('mousedown', startDrawing);
+          canvas.addEventListener('mousemove', draw);
+          canvas.addEventListener('mouseup', stopDrawing);
+          canvas.addEventListener('mouseleave', stopDrawing);
+          
+          function startDrawing(event) {
+              drawin = true;
+              ct.beginPath();
+              ct.moveTo(event.offsetX, event.offsetY);
+          }
+          
+          function draw(event) {
+              if (!drawin) return;
+              ct.lineTo(event.offsetX, event.offsetY);
+              ct.stroke();
+          }
+          
+          function stopDrawing() {
+              drawin = false;
+          }
+          
+          function clearSignature() {
+              ct.clearRect(0, 0, canvas.width, canvas.height);
+          }
+      </script>
+  </td>
+</tr>
+
+</table>
 <br>
 
+<h1>Espaço para observação: </h1>
+<textarea   cols="135" rows="20"></textarea>
 
    
 
