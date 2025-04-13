@@ -20,7 +20,7 @@
     <!--Cabeçalho-->
     <table border="1" style="border-collapse: collapse;">
     <tr>
-      <td id="titulo">CheckList</td>
+      <td id="titulo">CheckList s</td>
     </tr>
     <tr>
       <td>Área</td>
@@ -44,19 +44,19 @@
   <!---->   
 <table border="1" style="border-collapse: collapse;">
     <tr>
-        <td class="Solicitado" id="Solicitado">SCTASK:  Solicitado por:
-            Área:    <input type="text" name="area" placeholder="area">              
+        <td class="Solicitado" id="Solicitado">SCTASK:  Solicitado por: <input type="text" name="solicitado" placeholder="solicitado"><br>
+            Área:    <input type="text" name="area" placeholder="area">     <br>         
             
-            (  ) Inicial ( ) Continuação </td>
-        <td class="analista" id="analista">ANALISTA:   
+            (  <input type="radio" name="X" value="X"> ) Inicial ( <input type="radio" name="X" value="X"> ) Continuação </td>
+        <td class="analista" id="analista">ANALISTA:  <input type="search" name="analista"> <br>
 
-            ID:
+          <br>  ID:  <input type="number">
             </td>
       </tr>
 
       <tr>
-        <td>AMBIENTE:</td>
-        <td>SITE:</td>
+        <td>AMBIENTE: <input type="text" name="ambiente" placeholder="AMBIENTE">   </td>
+        <td>SITE: <input type="text" name="site" placeholder="site"></td>
       </tr>
       </table>
       
@@ -75,15 +75,15 @@
       </tr>
       <article class="numeracao" id="numeracao">
       <tr >
-        <td ></td>
-        <td></td>
+        <td> <input type="radio" name="1"> </td><!--Sim-->
+        <td> <input type="radio" name="1"> </td><!--Não--> 
 		<td width="10">1.</td> 
         <td class="descricao" id="descricao">Técnico(s) chega(m) e fornece(m) número da SCTASK / RITM. </td>
       </tr>
       
       <tr>
-        <td></td><!--Sim-->
-        <td></td><!--Não--> 
+        <td> <input type="radio" name="V">  </td><!--Sim-->
+        <td> <input type="radio" name="V"> </td><!--Não--> 
         <td>2.</td> 
 		<td class="descricao" id="descricao">Pegar o checklist físico da SCTASK na pasta física “A EXECUTAR”. 
 			Caso não esteja impressa, imprimir template localizado no Sharepoint> Pasta Templates Operacionais> 
@@ -91,8 +91,8 @@
 		      </tr>
       
       <tr>
-        <td></td>
-        <td></td>
+        <td> <input type="radio" name="3"> </td><!--Sim-->
+        <td> <input type="radio" name="3"> </td><!--Não--> 
         <td> <span class="comentario">3.</span></td> 
 		<td class="descricao" id="descricao">
 		Busca no Vivo Now o número da SCTASK / RITM. 
@@ -100,21 +100,21 @@
 		
       </tr>
       <tr>
-        <td> </td>
-        <td></td>
+        <td> <input type="radio" name="4"> </td><!--Sim-->
+        <td> <input type="radio" name="4"> </td><!--Não--> 
         <td>4.</td> 
 		<td class="descricao" id="descricao">Verificar o template da SCTASK: -Troubleshooting ( )
 			 ou – Console/instalação de S.O.  ( ) </td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
+        <td> <input type="radio" name="5"> </td><!--Sim-->
+        <td> <input type="radio" name="5"> </td><!--Não--> 
         <td>5.</td> 
 		<td class="descricao" id="descricao">Alterar Status da SCTASK para Em Andamento, caso não esteja. </td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
+        <td> <input type="radio" name="6"> </td><!--Sim-->
+        <td> <input type="radio" name="6"> </td><!--Não--> 
         <td>6.</td> 
 		<td class="descricao" id="descricao">Valida se a nota do chamado contém as informações abaixo.
 			 Caso não tenha as informações nas notas, solicitar inclusão pelo solicitante:Qtd equipamentos (  )
@@ -138,45 +138,43 @@
 	 </td>
       </tr>
            
-      <tr>
-        <td></td>
-        <td></td>
+      <tr> <td> <input type="radio" name="7"> </td><!--Sim-->
+        <td> <input type="radio" name="7"> </td><!--Não--> 
         <td>7.</td> 
 		<td class="descricao" id="descricao">Confirmar com o técnico o que será realizado na atividade. </td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
+        <td> <input type="radio" name="8"> </td><!--Sim-->
+        <td> <input type="radio" name="8"> </td><!--Não--> 
         <td>8.</td> 
 		<td class="descricao" id="descricao">Verifica se o técnico possui GAUS ativa para entrada no ambiente. </td>
       </tr>
       
       <tr>
-        <td></td>
-        <td></td>
+        <td> <input type="radio" name="9"> </td><!--Sim-->
+        <td> <input type="radio" name="9"> </td><!--Não--> 
         <td>9.</td> 
-		<td class="descricao" id="descricao">Preencher a nota do chamado com as informações do(s) técnico(s):  
+		<td class="descricao" id="descricao">Preencher a nota do chamado com as informações do(s) técnico(s): <br> 
 
-		Nome:  
+		Nome:  <input type="text" name="nome" placeholder="Nome"><br>
 
-		Empresa: 
+		Empresa: <input type="search" name="empresa"><br>
 
-		Telefone: 	 
+		Telefone: 	<input type="tel" placeholder="(xx) xxxx-xxxx"><br> 
 
 		Em caso de mais técnicos, colocar os dados no verso da folha. </td>
       </tr>
       
-      <tr>
-        <td></td>
-        <td></td>
+      <tr> <td> <input type="radio" name="10"> </td><!--Sim-->
+        <td> <input type="radio" name="10"> </td><!--Não--> 
         <td>10.</td> 
 		<td class="descricao" id="descricao">Pegar Chaves na caixa de chaves, na pasta Controle de Chaves 
 	CONTROLE DE CLAVICULÁRIO, consultar mapa de chaves e preencher as informações do técnico ou operador </td>
       </tr>
       
       <tr>
-        <td></td>
-        <td></td>
+        <td> <input type="radio" name="11"> </td><!--Sim-->
+        <td> <input type="radio" name="11"> </td><!--Não--> 
         <td>11.</td> 
 		<td class="descricao" id="descricao">
 		Pegar a(s) chave(s) fisicamente ( )  referente a posição do rack solicitada.
@@ -185,9 +183,8 @@
 </td>
       </tr>
 	  
-	  <tr>
-	          <td></td>
-	          <td></td>
+	  <tr> <td> <input type="radio" name=" "> </td><!--Sim-->
+      <td> <input type="radio" name=" "> </td><!--Não--> 
 	          <td> .</td> 
 	  		<td class="descricao" id="descricao">Orientar o técnico o que a SCTASK contempla:  
 - Esta SCTASK contempla APENAS acesso a console. Nenhum cabo poderá ser alterado e nenhuma
@@ -195,32 +192,33 @@
 	        </tr>
       
       <tr>
-        <td></td>
-        <td></td>
+        <td> <input type="radio" name="12"> </td><!--Sim-->
+        <td> <input type="radio" name="12"> </td><!--Não--> 
         <td>12.</td> 
 		<td class="descricao" id="descricao">Verificar se o técnico precisará de teclado e mouse. SIM ( ) NÃO (    ) </td>
       </tr>
       
       <tr>
-        <td></td>
-        <td></td>
+        <td> <input type="radio" name="13"> </td><!--Sim-->
+        <td> <input type="radio" name="13"> </td><!--Não--> 
         <td>13.</td> 
 		<td class="descricao" id="descricao">Se SIM, retirar equipamento do armário. MOUSE (No.) TECLADO (No.    ) </td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
+        <td> <input type="radio" name="14"> </td><!--Sim-->
+        <td> <input type="radio" name="14"> </td><!--Não--> 
         <td>14.</td> 
 		<td class="descricao" id="descricao">Verificação de segurança, todos:  
 
-		- Estão entrando no DC com: (        ) sem equipamento    (         ) notebook -  (         ) cabo de rede  (        ) Outros: 
+		- Estão entrando no DC com: (      <input type="checkbox">  ) sem equipamento    ( <input type="checkbox"> ) 
+    notebook -  (  <input type="checkbox">     ) cabo de rede  ( <input type="checkbox">       ) Outros: <input type="text"> 
 
-		- Estão com Pro pé. Sim (               )    Não (             ) </td>
+		- Estão com Pro pé. Sim (    <input type="radio" name="prope"> )    Não (  <input type="radio" name="prope">           ) </td>
 		</tr>
 	  
       <tr>
-        <td></td>
-        <td></td>
+        <td> <input type="radio" name="15"> </td><!--Sim-->
+        <td> <input type="radio" name="15"> </td><!--Não--> 
         <td>15.</td> 
 		<td class="descricao" id="descricao">Solicitar ao técnico que entre primeiro no ambiente com seu próprio crachá. 
 			Caso não tenha acesso, solicitar para que providencie.  
@@ -229,52 +227,53 @@
 		</tr>
 	  
       <tr>
-        <td></td>
-        <td></td>
+        <td> <input type="radio" name="16"> </td><!--Sim-->
+        <td> <input type="radio" name="16"> </td><!--Não--> 
         <td>16.</td>
 		<td class="descricao" id="descricao">Direciona o técnico na fila e rack específico. </td>
       </tr>
 		      <tr>
-        <td></td>
-        <td></td>
+            <td> <input type="radio" name="17"> </td><!--Sim-->
+            <td> <input type="radio" name="17"> </td><!--Não--> 
         <td>17.</td> 
-		<td class="descricao" id="descricao">Verificar condições do piso: limpo e organizado.  Sim ( )  Não (     ). 
+		<td class="descricao" id="descricao">Verificar condições do piso: limpo e organizado.  Sim ( <input type="radio" name="limpo"> ) 
+       Não (  <input type="radio" name="limpo">   ). 
 
 		Em caso de NOK na verificação, após a saída do técnico, pegar equipamento de limpeza (aspirador) e deixar o ambiente de acordo com o padrão. 
 
-		-O ambiente final foi deixado de acordo?  Sim (               )    Não (             )  
+		<br>-O ambiente final foi deixado de acordo?  Sim (    <input type="radio" name="acordo" id="">            )    Não (  <input type="radio" name="acordo">            )  
 
 		Caso não, justificar, inserir comentário no Resumo do checklist, informar ponto focal e colocar a observação Vivo Now.  
 
 		-Todos os padrões encontram-se no documento Sharepoint > Padrão_Telefonica.doc. Em caso de NOK informar o ponto focal, colocar no detalhamento desse chamado Vivo Now e no final do checklist. </td>      
       </tr>
       <tr>
-        <td></td>
-        <td></td>
+        <td> <input type="radio" name="18"> </td><!--Sim-->
+        <td> <input type="radio" name="18"> </td><!--Não--> 
         <td>18.</td>
 		<td class="descricao" id="descricao">Confirmar se todos saíram com os materiais que entraram. </td>      
       </tr>
       <tr>
-        <td></td>
-        <td></td>
+        <td> <input type="radio" name="19"> </td><!--Sim-->
+        <td> <input type="radio" name="19"> </td><!--Não--> 
         <td>19.</td> 
 		<td class="descricao" id="descricao">Se for o caso, solicitar o material para o técnico. Colocar Mouse e teclado no armário </td>      
       </tr>
       <tr>
-        <td></td>
-        <td></td>
+        <td> <input type="radio" name="20"> </td><!--Sim-->
+        <td> <input type="radio" name="20"> </td><!--Não--> 
         <td>20.</td>
 		<td class="descricao" id="descricao">Devolver a(s) chave(s) na caixa de chaves. Chaves devolvidas (no.                                 )  </td>      
       </tr>
       <tr>
-        <td></td>
-        <td></td>
+        <td> <input type="radio" name="21"> </td><!--Sim-->
+        <td> <input type="radio" name="21"> </td><!--Não--> 
         <td>21.</td> 
 		<td class="descricao" id="descricao">Abrir o Controle de chaves CONTROLE DE CLAVICULÁRIO e dar baixa no controle da chave. </td>      
       </tr>
       <tr>
-        <td></td>
-        <td></td>
+        <td> <input type="radio" name="22"> </td><!--Sim-->
+        <td> <input type="radio" name="22"> </td><!--Não--> 
         <td>22.</td> 
 		<td class="descricao" id="descricao">Incluir na nota com o que foi realizado e alterar o status do chamado.
 			 Copiar template padrão no documento 1.x.x.x Template_Chamados_VX.X.pdf	 
@@ -286,8 +285,8 @@
 	  
       
       <tr>
-        <td></td>
-        <td></td>
+        <td> <input type="radio" name="23"> </td><!--Sim-->
+        <td> <input type="radio" name="23"> </td><!--Não--> 
         <td>23.</td> 
 		<td class="descricao" id="descricao">Escanear o checklist, salvar com o nome SCTASKXXXXXXX_2025MMDD.pdf 
 	(onde XXXXX é o número da SCTASK e MM mês DD dia da execução), anexar arquivo do chamado no Vivo Now e 
