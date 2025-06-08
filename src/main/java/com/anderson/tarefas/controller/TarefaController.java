@@ -28,6 +28,9 @@ private tarefasApplicatione tarefaService;
 		this.tarefaService = tarefaService;
 	}
 	//Listar todos
+
+
+	/*
 	@GetMapping("/listarTarefas")
 	public String listarTarefas(Model model)
 	{
@@ -35,6 +38,10 @@ private tarefasApplicatione tarefaService;
 		
 		return "tarefas";
 	}
+	*/
+
+
+
 	//Listar por numero
 	@GetMapping("/listarTarefas/{numero}")
 	public String listarTarefas(@PathVariable long numero, Model model)
